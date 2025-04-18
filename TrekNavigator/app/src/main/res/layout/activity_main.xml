@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/uiPanel"
+        android:orientation="vertical"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="#CCFFFFFF">
+
+        <EditText android:id="@+id/inputStart" ... />
+        <EditText android:id="@+id/inputEnd" ... />
+
+        <LinearLayout android:orientation="horizontal" ... >
+            <Button android:id="@+id/buttonUseGPS" ... />
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal" ... >
+            <Button android:id="@+id/buttonFind" ... />
+            <Button android:id="@+id/buttonNavigate" ... />
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal" ... >
+            <TextView android:id="@+id/textDistance" ... />
+            <TextView android:id="@+id/textElevation" ... />
+            <TextView android:id="@+id/textTime" ... />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.maplibre.gl.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_below="@id/uiPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
